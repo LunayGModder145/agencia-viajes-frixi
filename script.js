@@ -16,27 +16,48 @@ const data = [
   }
 ];
 
-const contenedorRecomendados = document.getElementById("contenedor-recomendados");
+const cities = [
+  "Madrid",
+  "Barcelona",
+  "Valencia",
+  "Seville",
+  "Bilbao",
+  "Granada",
+  "Malaga",
+  "Palma de Mallorca",
+  "Alicante",
+  "Zaragoza"
+];
 
-// Bucle básico para inyectar solo las imágenes
+// Se declaran las referencias al DOM una sola vez
+const contenedorRecomendados = document.getElementById("contenedor-recomendados");
+const selectDestinos = document.getElementById("select-destinos");
+
+// Bucle para inyectar las tarjetas en Recomendados
 for (let i = 0; i < data.length; i++) {
   const card = document.createElement("div");
   card.classList.add("card");
   
-  // Añadimos la imagen primero
   const img = document.createElement("img");
   img.src = data[i].url_img;
   card.appendChild(img);
   
-  // 3. Creamos el título <h3> y le asignamos el texto desde data[i].title
   const h3 = document.createElement("h3");
   h3.textContent = data[i].title;
   card.appendChild(h3);
 
-  // 4. Creamos el párrafo <p> y le asignamos la descripción desde data[i].description
   const p = document.createElement("p");
   p.textContent = data[i].description;
   card.appendChild(p);
  
   contenedorRecomendados.appendChild(card);
+}
+
+// Bucle para inyectar las ciudades en el selector Destinos
+for (let i = 0; i < cities.length; i++) {
+  const option = document.createElement("option");
+  option.value = cities[i];
+  option.textContent = cities[i];
+  
+  selectDestinos.appendChild(option);
 }
