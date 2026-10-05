@@ -18,17 +18,64 @@ header {
   padding: 24px 16px;
 }
 
+.seccion {
+  margin-bottom: 32px;
+}
+
+.seccion h2 {
+  margin-bottom: 16px;
+  color: #1f2328;
+}
+
+.banner img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Grid para mostrar las tarjetas lado a lado */
 .grid-recomendados {
   display: flex;
   gap: 16px;
 }
 
+/* Estilo individual de cada tarjeta */
 .card {
   flex: 1;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .card img {
   width: 100%;
   height: 160px;
   object-fit: cover;
+}
+
+/* Espaciado para el texto dentro de la tarjeta */
+.card h3 {
+  font-size: 1.1rem;
+  margin: 12px 12px 6px 12px;
+  color: #24292e;
+  text-transform: capitalize;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #586069;
+  margin: 0 12px 12px 12px;
+  line-height: 1.4;
+}
+
+/* Selector de destinos */
+.select-container select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5da;
 }
