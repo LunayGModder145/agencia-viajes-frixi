@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRÁCTICA DOM</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <header>
+    <h1>PRÁCTICA DOM</h1>
+  </header>
+
+  <main class="container">
+
+    <section class="seccion">
+      <h2>Bienvenidos</h2>
+      <div class="banner">
+        <img src="assets/banner.jpg" alt="Bienvenidos">
+      </div>
+    </section>
+ 
+    <section class="seccion">
+  <h2>Recomendados</h2>
+  <div id="contenedor-recomendados" class="grid-recomendados"></div>
+</section>
+
+    <section class="seccion">
+      <h2>Destinos</h2>
+      <div class="select-container">
+        <select id="select-destinos">
+          
+        </select>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
